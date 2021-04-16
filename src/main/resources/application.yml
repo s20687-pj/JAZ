@@ -1,0 +1,18 @@
+my:
+  custom:
+    property: Hello from application properties
+    random: default properties
+  radom: ABCABC
+
+---
+spring:
+  config:
+    activate:
+      on-profile: 
+  main:
+    banner-mode: off
+my:
+  custom:
+    property: Hello from application properties
+
+---
