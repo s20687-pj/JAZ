@@ -9,16 +9,15 @@ import org.springframework.stereotype.Component;
 public class MyFirstComponent {
 
 
-    public  MyFirstComponent(ApplicationContext applicationContext, @Value("${message.default.hello}") String welcomeMessage, @Value("${creating.bean}") boolean creatigbean){
-//        System.out.println("FIRST");
-//        MySecondComponent mySecondComponent = applicationContext.getBean("mySecondComponent", MySecondComponent.class);
-//        mySecondComponent.hello();
-//        System.out.println(welcomeMessage);
+    public  MyFirstComponent(ApplicationContext applicationContext, @Value("${creating.bean}") boolean creatigbean){
+//
         System.out.println(creatigbean);
 
-        if(creatigbean){
+        if(creatigbean == true){
             HomeExcercise homeExcercise = applicationContext.getBean("homeExcercise", HomeExcercise.class);
         }
+
+
 
     }
 

@@ -1,5 +1,6 @@
 package pl.pjatk.karkra;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,5 +16,8 @@ public class ConfigurationClass {
     public List<String> defaultData(){
         return List.of("Karol","Kraus","Pjatk","default","data");
     }
-
+    
+    @ConditionalOnProperty(value="creating.bean", havingValue = "true", matchIfMissing = false)
+    @Bean
+    public HomeExcercise homeExcercise(){ return new HomeExcercise();}
 }
