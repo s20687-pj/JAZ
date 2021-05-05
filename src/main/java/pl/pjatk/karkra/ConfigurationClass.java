@@ -16,7 +16,7 @@ public class ConfigurationClass {
     public List<String> defaultData(){
         return List.of("Karol","Kraus","Pjatk","default","data");
     }
-    
+
     @ConditionalOnProperty(value="creating.bean", havingValue = "true", matchIfMissing = false)
     @Bean
     public HomeExcercise homeExcercise(){ return new HomeExcercise();}
